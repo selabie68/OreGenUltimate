@@ -1,0 +1,13 @@
+name: OreGenUltimate
+main: main.OreGenUltimate.OreGenUltimate
+version: 0.0.3b
+author: anarcist69
+
+commands:
+    ogu:
+        description: Shows list of commands.
+
+permissions:
+    ogu.reload:
+        description: Reloads the config file.
+        default: false
