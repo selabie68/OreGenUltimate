@@ -1,5 +1,6 @@
-Chance: 800
+Chance: 1600
 Chances:
+  #Ores
   Coal: 300
   Iron: 225
   Gold: 150
@@ -7,4 +8,12 @@ Chances:
   Lapis: 50
   Emerald: 25
   Diamond: 10
+  #Blocks
+  CoalBlock: 300
+  IronBlock: 225
+  GoldBlock: 150
+  RedstoneBlock: 100
+  LapisBlock: 50
+  EmeraldBlock: 25
+  DiamondBlock: 10
 Worlds:
