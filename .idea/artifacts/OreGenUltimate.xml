@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="OreGenUltimate">
+    <output-path>$PROJECT_DIR$/classes/artifacts/OreGenUltimate</output-path>
+    <root id="archive" name="OreGenUltimate.jar">
+      <element id="module-output" name="OreGenUltimate" />
+    </root>
+  </artifact>
+</component>

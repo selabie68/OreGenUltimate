@@ -36,13 +36,28 @@ public class Listeners implements Listener {
                     if (worlds.contains(event.getBlock().getLocation().getWorld().getName())){
                         //Create a HashMap for our minerals
                         Map<String, Integer> minerals = new HashMap<>();
+                        //Coal Blocks
                         minerals.put("coal", _ogu.getConfig().getInt("Chances.Coal"));
+                        minerals.put("coalblock", _ogu.getConfig().getInt("Chances.CoalBlock"));
+                        //Iron Blocks
                         minerals.put("iron", _ogu.getConfig().getInt("Chances.Iron"));
+                        minerals.put("ironblock", _ogu.getConfig().getInt("Chances.IronBlock"));
+                        //Gold Blocks
                         minerals.put("gold", _ogu.getConfig().getInt("Chances.Gold"));
+                        minerals.put("goldblock", _ogu.getConfig().getInt("Chances.GoldBlock"));
+                        //Redstone Blocks
                         minerals.put("redstone", _ogu.getConfig().getInt("Chances.Redstone"));
+                        minerals.put("redstoneblock", _ogu.getConfig().getInt("Chances.RedstoneBlock"));
+                        //Lapis Blocks
                         minerals.put("lapis", _ogu.getConfig().getInt("Chances.Lapis"));
+                        minerals.put("lapisblock", _ogu.getConfig().getInt("Chances.LapisBlock"));
+                        //Emerald Blocks
                         minerals.put("emerald", _ogu.getConfig().getInt("Chances.Emerald"));
+                        minerals.put("emeraldblock", _ogu.getConfig().getInt("Chances.EmeraldBlock"));
+                        //Diamond Blocks
                         minerals.put("diamond", _ogu.getConfig().getInt("Chances.Diamond"));
+                        minerals.put("diamondblock", _ogu.getConfig().getInt("Chances.DiamondBlock"));
+
                         //Sort our HashMap from smallest to largest
                         Map<String, Integer> sortedMinerals = sortByValue(minerals);
                         Map<String, Integer> sortedMinerals2 = sortByValue(minerals);
@@ -77,35 +92,70 @@ public class Listeners implements Listener {
                                     if(_ogu.getConfig().getInt("debug") == 1){
                                         _ogu.getServer().broadcastMessage("We generated Coal");
                                     }
+                                }else if(pairs.getKey() == "coalblock") {
+                                    b.setType(Material.COAL_BLOCK);
+                                    if(_ogu.getConfig().getInt("debug") == 1){
+                                        _ogu.getServer().broadcastMessage("We generated Coal Block");
+                                    }
                                 }else if(pairs.getKey() == "iron") {
                                     b.setType(Material.IRON_ORE);
                                     if(_ogu.getConfig().getInt("debug") == 1){
                                         _ogu.getServer().broadcastMessage("We generated Iron");
+                                    }
+                                }else if(pairs.getKey() == "ironblock") {
+                                    b.setType(Material.IRON_BLOCK);
+                                    if(_ogu.getConfig().getInt("debug") == 1){
+                                        _ogu.getServer().broadcastMessage("We generated Iron Block");
                                     }
                                 }else if(pairs.getKey() == "gold") {
                                     b.setType(Material.GOLD_ORE);
                                     if(_ogu.getConfig().getInt("debug") == 1){
                                         _ogu.getServer().broadcastMessage("We generated Gold");
                                     }
+                                }else if(pairs.getKey() == "goldblock") {
+                                    b.setType(Material.GOLD_BLOCK);
+                                    if(_ogu.getConfig().getInt("debug") == 1){
+                                        _ogu.getServer().broadcastMessage("We generated Gold Block");
+                                    }
                                 }else if(pairs.getKey() == "redstone") {
                                     b.setType(Material.REDSTONE_ORE);
                                     if(_ogu.getConfig().getInt("debug") == 1){
                                         _ogu.getServer().broadcastMessage("We generated Redstone");
+                                    }
+                                }else if(pairs.getKey() == "redstoneblock") {
+                                    b.setType(Material.REDSTONE_BLOCK);
+                                    if(_ogu.getConfig().getInt("debug") == 1){
+                                        _ogu.getServer().broadcastMessage("We generated Redstone Block");
                                     }
                                 }else if(pairs.getKey() == "lapis") {
                                     b.setType(Material.LAPIS_ORE);
                                     if(_ogu.getConfig().getInt("debug") == 1){
                                         _ogu.getServer().broadcastMessage("We generated Lapis");
                                     }
+                                }else if(pairs.getKey() == "lapisblock") {
+                                    b.setType(Material.LAPIS_BLOCK);
+                                    if(_ogu.getConfig().getInt("debug") == 1){
+                                        _ogu.getServer().broadcastMessage("We generated Lapis Block");
+                                    }
                                 }else if(pairs.getKey() == "emerald") {
                                     b.setType(Material.EMERALD_ORE);
                                     if(_ogu.getConfig().getInt("debug") == 1){
                                         _ogu.getServer().broadcastMessage("We generated Emerald");
                                     }
+                                }else if(pairs.getKey() == "emeraldblock") {
+                                    b.setType(Material.EMERALD_BLOCK);
+                                    if(_ogu.getConfig().getInt("debug") == 1){
+                                        _ogu.getServer().broadcastMessage("We generated Emerald Block");
+                                    }
                                 }else if(pairs.getKey() == "diamond") {
                                     b.setType(Material.DIAMOND_ORE);
                                     if(_ogu.getConfig().getInt("debug") == 1){
                                         _ogu.getServer().broadcastMessage("We generated Diamond");
+                                    }
+                                }else if(pairs.getKey() == "diamondblock") {
+                                    b.setType(Material.DIAMOND_BLOCK);
+                                    if(_ogu.getConfig().getInt("debug") == 1){
+                                        _ogu.getServer().broadcastMessage("We generated Diamond Block");
                                     }
                                 }else{
                                     if(_ogu.getConfig().getInt("debug") == 1){
